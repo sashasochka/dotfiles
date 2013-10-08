@@ -1,0 +1,4 @@
+#!/bin/bash
+echo 'system("pause")? Okay... Press enter to finish'
+read
+

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+projects="$HOME/Projects"
+templates="$projects/Olimp/Templates"
+template="$templates/rcc_nb"
+netbeans="$HOME/netbeans-7.3/bin/netbeans"
+
+if [[ ! -d $template ]]; then
+    echo "  Template not found in $template"
+    exit 1
+fi
+
+if [[ $# -ne 1 ]]; then
+    echo "  Format:    setuprcc ContestNumber"
+    exit 2
+fi
+
+for task in {A,B,C,D,E}; do 
+    # make new project for every task in contest. 
+    # Copy files if accidental overwrite
+    name="rcc_$1_$task"
+    cp -rfd $template $projects/$name
+    sed -i "s/cf_netbeans_project/rcc_$1_$task/g" $projects/$name/nbproject/project.xml
+done;
+
+$netbeans $projects/rcc_$1_{A,B,C,D,E} &

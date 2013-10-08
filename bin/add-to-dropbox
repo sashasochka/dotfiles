@@ -1,0 +1,15 @@
+#!/bin/bash
+if [[ $# != 1 ]]; then
+    echo "Only one argument should be passed"
+    exit 2
+fi
+
+if [[ ! -e $1 ]]; then
+    echo "File $1 cannot be opened"
+    exit 3
+fi
+
+bsnm=$(basename $1)
+mv $1 ~/Dropbox/Repo/ && ln -s ~/Dropbox/Repo/$bsnm ~/$bsnm
+exit $?
+

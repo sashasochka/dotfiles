@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ $# -eq 1 ]; then 
+  cd $1
+  for f in *.cpp *.cc *.c *.h *.hpp; do
+    test -r "$f" && cpplint "$f" 
+  done
+else
+  echo "Folder not provided. Usage cpplint-dir folder_name"
+fi 

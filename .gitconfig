@@ -1,0 +1,30 @@
+[alias]
+    tree = log --graph --all --decorate --pretty=oneline --abbrev-commit
+    tr = log --graph --all --decorate --pretty=oneline --abbrev-commit
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    dc = diff --cached
+    lg = log -p
+    who = shortlog -s --
+[color]
+    ui = true
+[user]
+	name = Oleksandr
+	email = sasha.sochka@gmail.com
+
+[url "git://anongit.kde.org/"]
+    insteadOf = kde:
+[url "git@git.kde.org:"]
+    pushInsteadOf = kde
+	pushInsteadOf = kde:
+
+[credential]
+	helper = cache --timeout=3600
+[push]
+	default = matching
+[core]
+	editor = vim
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+# echo "Init" > tokde.log
+killall awesome
+# echo "Awesome killed" >> tokde.log
+plasma-desktop
+# echo "Plasma started" >> tokde.log
+kwin&
+# echo "Kwin started" >> tokde.log
+krunner
+# echo "Krunner started" >> tokde.log
+

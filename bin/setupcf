@@ -1,0 +1,26 @@
+#!/bin/bash
+
+projects="$HOME/Projects"
+templates="$projects/Olimp/Templates"
+template="$templates/cf_nb/"
+netbeans="$HOME/netbeans-7.3/bin/netbeans"
+
+if [[ ! -d $template ]]; then
+    echo "  Template not found in $template"
+    exit 1
+fi
+
+if [[ $# -ne 1 ]]; then
+    echo "  Format:    setupcf ContestNumber"
+    exit 2
+fi
+
+for task in {A,B,C,D,E}; do 
+    # make new project for every task in contest. 
+    # Copy files if accidental overwrite
+    name="cf_$1$task"
+    cp -rfd $template $projects/$name
+    sed -i "s/netbeans_project/$1$task/g" $projects/$name/nbproject/project.xml
+done;
+
+$netbeans $projects/cf_$1{A,B,C,D,E} &
