@@ -72,9 +72,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
-# Default pager
-export PAGER=/usr/bin/less
-
 PATH=~/google_appengine:$PATH
 PATH=~/qtcreator-2.6.2/bin:$PATH
 PATH=~/adt-bundle-linux-x86_64/sdk/platform-tools:$PATH
