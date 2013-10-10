@@ -10,5 +10,5 @@ set guioptions ~=l
 set guioptions ~=L
 
 set background =dark
-colorscheme desert
+colorscheme evening
 
