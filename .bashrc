@@ -56,6 +56,9 @@ alias l='ls -CF'
 alias ..='cd ..; ls'
 alias ...='cd ../..; ls'
 
+# use cool git diff output instead of default diff
+alias diff='git diff --no-index'
+
 # more useful alias
 alias cl='clear'
 alias md='mkdir'
