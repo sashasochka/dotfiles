@@ -1,0 +1,14 @@
+#!/bin/bash
+for file in ~/Dropbox/Repo/*; do
+    bsnm=$(basename $file)
+    if [[ -e ~/$bsnm ]]; then
+        if [[ -L ~/$bsnm ]]; then
+            echo "Omitting " ~/$bsnm " - already a link!"
+        else
+            echo "Cannot make a link from " ~/$bsnm to $file
+        fi
+    else
+        ln -s $file ~/$bsnm
+    fi
+done;
+
