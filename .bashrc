@@ -87,7 +87,7 @@ PATH=$EC2_HOME/bin:$PATH
 export EC2_PRIVATE_KEY=$EC2_HOME/pk-6UM7PCCNAJXDRL667L5TDCY6ERUUU5C6.pem
 export EC2_CERT=$EC2_HOME/cert-6UM7PCCNAJXDRL667L5TDCY6ERUUU5C6.pem
 export EC2_URL=https://ec2.eu-west-1.amazonaws.com
-export JAVA_HOME=/usr
+export JAVA_HOME=/usr/lib/jvm/default-java
 export PATH
 
 function clip() {
