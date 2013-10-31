@@ -77,8 +77,8 @@ export CXX=/usr/bin/clang++
 
 PATH=~/google_appengine:$PATH
 PATH=~/qtcreator-2.6.2/bin:$PATH
-PATH=~/adt-bundle-linux-x86_64/sdk/platform-tools:$PATH
-PATH=~/adt-bundle-linux-x86_64/sdk/tools:$PATH
+PATH=~/android-studio/sdk/platform-tools:$PATH
+PATH=~/android-studio/sdk/tools:$PATH
 PATH=~/emscripten:$PATH
 PATH=~/bin:$PATH
 
