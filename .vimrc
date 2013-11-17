@@ -242,10 +242,3 @@ map n nzz
 
 inoremap jk <Esc>
 
-" Hard way
-" Force to learn jk 
-inoremap <Esc> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
