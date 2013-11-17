@@ -195,9 +195,6 @@ set backspace=2
 " Ignoring case is a fun trick
 set ignorecase
 
-" This is totally awesome - remap jj to escape in insert mode.  You'll never type jj anyway, so it's great!
-inoremap jjj <Esc> nnoremap JJJJ <Nop>
-
 " Incremental searching is sexy
 set incsearch
 
