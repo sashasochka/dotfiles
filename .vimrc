@@ -238,4 +238,5 @@ map n nzz
 " }}}
 
 inoremap jk <Esc>
+inoremap ол <Esc>
 
