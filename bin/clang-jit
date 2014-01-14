@@ -1,0 +1,6 @@
+#!/bin/bash
+bitcode_src=$(mktemp)
+clang -c -emit-llvm -o $bitcode_src -O1 $@
+lli $bitcode_src
+rm $bitcode_src
+
