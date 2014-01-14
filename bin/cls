@@ -1,1 +1,4 @@
-/usr/bin/clear
+#!/bin/bash
+clear
+echo 'system("cls") ? Okay...'
+
