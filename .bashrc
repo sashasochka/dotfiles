@@ -116,8 +116,6 @@ set -o vi
 
 export EDITOR=vim
 
-# source ~/.kde-bashrc
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
