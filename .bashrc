@@ -75,6 +75,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 
+PATH=~/scala/bin:$PATH
 PATH=~/google_appengine:$PATH
 PATH=~/Qt/5.2.0/gcc_64/bin:$PATH
 PATH=~/android-studio/sdk/platform-tools:$PATH
@@ -88,6 +89,7 @@ export EC2_PRIVATE_KEY=$EC2_HOME/pk-6UM7PCCNAJXDRL667L5TDCY6ERUUU5C6.pem
 export EC2_CERT=$EC2_HOME/cert-6UM7PCCNAJXDRL667L5TDCY6ERUUU5C6.pem
 export EC2_URL=https://ec2.eu-west-1.amazonaws.com
 export JAVA_HOME=/usr/lib/jvm/default-java
+export SCALA_HOME=~/scala
 export PATH
 
 function clip() {
