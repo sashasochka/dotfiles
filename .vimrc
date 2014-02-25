@@ -1,9 +1,18 @@
-" Settings for all vim and gvim sessions
+" Setup vundle
+set nocompatible
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" solarized scheme background
-" set background=dark
+Bundle 'vundle'
+Bundle 'clang-complete'
+Bundle 'Cpp11-Syntax-Support'
+Bundle 'vim-coffee-script'
+Bundle 'git@github.com:derekwyatt/vim-scala'
 
-filetype indent on
+filetype plugin indent on
+syntax enable
+filetype off
+filetype on
 
 " Who doesn't like autoindent?
 set autoindent
@@ -27,9 +36,6 @@ set number
 
 " enable highlighting of search results
 " set hlsearch
-
-" Necesary  for lots of cool vim things
-set nocompatible
 
 " allow backspacing over everything
 set backspace=indent,eol,start
