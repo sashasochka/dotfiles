@@ -115,6 +115,7 @@ function exit() {
 set -o vi
 
 export EDITOR=vim
+export BROWSER=google-chrome
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
