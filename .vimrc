@@ -112,6 +112,7 @@ autocmd Filetype python setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype scala setlocal ts=2 sts=2 sw=2
 
 " Git commits:
 autocmd Filetype gitcommit setlocal spell textwidth=72
