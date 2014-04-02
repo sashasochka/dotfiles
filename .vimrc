@@ -47,6 +47,10 @@ set backspace=indent,eol,start
 set exrc
 set secure
 
+" Highlight right column
+highlight ColorColumn ctermbg=darkgray
+set colorcolumn=120
+
 " show pointer address at the bottom-right
 set ruler
 
