@@ -173,6 +173,7 @@ inoremap {<CR> {<C-o>o}<C-o>O
 " Additional after this post:
 " http://stackoverflow.com/questions/164847/what-is-in-your-vimrc
 nore ; :
+nore : ;
 nore Ж :
 
 " Automatically cd into the directory that the file is in
