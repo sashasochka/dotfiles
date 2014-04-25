@@ -93,6 +93,7 @@ export EC2_CERT=$EC2_HOME/cert-6UM7PCCNAJXDRL667L5TDCY6ERUUU5C6.pem
 export EC2_URL=https://ec2.eu-west-1.amazonaws.com
 export JAVA_HOME=/usr/lib/jvm/default-java
 export SCALA_HOME=~/scala
+export ANDROID_HOME=~/android-studio/sdk
 export PATH
 
 function clip() {
