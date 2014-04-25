@@ -1,0 +1,2 @@
+#!/bin/sh
+java $CONSCRIPT_OPTS -Xmx1G -jar /home/oleksandr/.conscript/sbt-launch.jar @/home/oleksandr/.conscript/n8han/giter8/g8/launchconfig "$@"
