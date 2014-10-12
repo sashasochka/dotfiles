@@ -1,0 +1,2 @@
+#!/bin/bash
+KDEHOME=~/.kde4-colorfix /usr/bin/firefox $@
