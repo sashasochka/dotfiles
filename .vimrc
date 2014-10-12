@@ -115,9 +115,12 @@ set langmap=’йцукенгшщзхїфівапролджєячсмитьбю'
 " Makefile
 autocmd FileType make setlocal noexpandtab
 
-" Indenting for html and js
+" Indenting for different languages
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype python setlocal ts=2 sts=2 sw=2
+autocmd Filetype ada setlocal ts=2 sts=2 sw=2
+autocmd Filetype adb setlocal ts=2 sts=2 sw=2
+autocmd Filetype ads setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
