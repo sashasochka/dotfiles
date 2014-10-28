@@ -52,6 +52,11 @@ alias ll='ls -ArthlF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# different aliases
+alias g='git'
+alias v='vim'
+alias e='echo'
+
 # cd aliases
 alias ..='cd ..; ls'
 alias ...='cd ../..; ls'
