@@ -8,6 +8,7 @@
   df = diff
   dc = diff --cached
   lg = log -p
+  pl = pull —rebase
   who = shortlog -s --
 [color]
   ui = true
