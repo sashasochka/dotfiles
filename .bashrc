@@ -53,7 +53,6 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # different aliases
-alias g='git'
 alias v='vim'
 alias e='echo'
 
@@ -129,3 +128,6 @@ export BROWSER=google-chrome
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+
+# added by travis gem
+[ -f /home/oleksandr/.travis/travis.sh ] && source /home/oleksandr/.travis/travis.sh
