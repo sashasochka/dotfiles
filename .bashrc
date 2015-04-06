@@ -35,6 +35,10 @@ shopt -s globstar
 # PS1="\[\e]0;\u@\h: \w\a\]$PS1"
 PS1='\[\e[0;36m\][\t]\[\e[m\] \[\e[0;33m\]\w\[\e[m\]> '
 
+if [ "$SSH_CONNECTION" -a "$SSH_TTY" == $(tty) ]; then
+    PS1="\[\e[1;32m\]$HOSTNAME $PS1";
+fi
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
