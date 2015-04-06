@@ -160,7 +160,7 @@ nnoremap <S-Tab> <S-v><
 " Compile and run
 " clang
 " nnoremap <F5> :!clear && clang++-3.6 -std=c++1z -g -stdlib=libc++ -O2 -pedantic -Wall -Wextra -Weffc++ -fopenmp -o run % && ./run <CR>
-nnoremap <F5> :!clear && clang++-3.6 -std=c++1z -g -O2 -pedantic -Wall -Wextra -Weffc++ -fopenmp -o run % && ./run <CR>
+nnoremap <F5> :!clear && clang++- -std=c++1y -g -O2 -pedantic -Wall -Wextra -Weffc++ -fopenmp -o run % && ./run <CR>
 " gcc
 nnoremap <F6> :!clear && g++ -O2 -pedantic -Wall -g -Wextra -Weffc++ -std=c++11 -fopenmp -o run % && ./run <CR>
 nnoremap <F7> :!clear && javac % && java $(echo % <bar> sed 's/\.java//') <CR>
