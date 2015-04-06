@@ -78,8 +78,12 @@ alias ccat='pygmentize -g'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+# SSH computers
+alias laptop='ssh dell-linux'
+alias pc='ssh 81.95.182.167'
+
 # Set clang as default compiler
-export CC=/usr/bin/clang
+export CC=/usr/bin/gcc
 export CXX=/usr/bin/clang++
 
 PATH=~/scala/bin:$PATH
