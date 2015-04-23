@@ -20,10 +20,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-shopt -s globstar
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -34,10 +30,6 @@ shopt -s globstar
 
 # PS1="\[\e]0;\u@\h: \w\a\]$PS1"
 PS1='\[\e[0;36m\][\t]\[\e[m\] \[\e[0;33m\]\w\[\e[m\]> '
-
-if [ "$SSH_CONNECTION" -a "$SSH_TTY" == $(tty) ]; then
-    PS1="\[\e[1;32m\]$HOSTNAME $PS1";
-fi
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

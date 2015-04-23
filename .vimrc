@@ -1,13 +1,4 @@
-" Setup vundle
 set nocompatible
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'vundle'
-Bundle 'clang-complete'
-Bundle 'Cpp11-Syntax-Support'
-Bundle 'vim-coffee-script'
-Bundle 'git@github.com:derekwyatt/vim-scala'
 
 filetype plugin indent on
 syntax enable
@@ -87,22 +78,6 @@ highlight MatchParen ctermbg=4
 set foldmethod=indent
 set foldlevel=99
 
-" Java specific stuff
-let java_highlight_all=1
-let java_highlight_debug=1
-
-let java_ignore_javadoc=1
-let java_highlight_functions=1
-let java_mark_braces_in_parens_as_errors=1
-
-" highlight strings inside C comments
-let c_comment_strings=1
-
-" set keymap=ukrainian-jcuken
-set iminsert=0
-set imsearch=0
-highlight lCursor guifg=NONE guibg=Cyan
-
 "Status line gnarliness
 set laststatus=2
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
@@ -157,15 +132,6 @@ inoremap ол <Esc>
 " Unindent on shift tab
 nnoremap <S-Tab> <S-v><
 
-" Compile and run
-" clang
-" nnoremap <F5> :!clear && clang++-3.6 -std=c++1z -g -stdlib=libc++ -O2 -pedantic -Wall -Wextra -Weffc++ -fopenmp -o run % && ./run <CR>
-nnoremap <F5> :!clear && clang++- -std=c++1y -g -O2 -pedantic -Wall -Wextra -Weffc++ -fopenmp -o run % && ./run <CR>
-" gcc
-nnoremap <F6> :!clear && g++ -O2 -pedantic -Wall -g -Wextra -Weffc++ -std=c++11 -fopenmp -o run % && ./run <CR>
-nnoremap <F7> :!clear && javac % && java $(echo % <bar> sed 's/\.java//') <CR>
-nnoremap <F8> :!clear && ./% <CR>
-
 " Copy all file
 nnoremap <F4> ggVG"+y<C-O><C-O>
 inoremap <F4> <ESC>ggVG"+y<C-O><C-O>a
@@ -179,36 +145,3 @@ inoremap {<CR> {<C-o>o}<C-o>O
 nore ; :
 nore : ;
 nore Ж :
-
-" Automatically cd into the directory that the file is in
-autocmd BufEnter * execute "chdir ".escape(expand("%:p:h"), ' ')
-
-" Remove any trailing whitespace that is in the file
-autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-
-" Restore cursor position to where it was before
-augroup JumpCursorOnEdit
-   au!
-   autocmd BufReadPost *
-            \ if expand("<afile>:p:h") !=? $TEMP |
-            \   if line("'\"") > 1 && line("'\"") <= line("$") |
-            \     let JumpCursorOnEdit_foo = line("'\"") |
-            \     let b:doopenfold = 1 |
-            \     if (foldlevel(JumpCursorOnEdit_foo) > foldlevel(JumpCursorOnEdit_foo - 1)) |
-            \        let JumpCursorOnEdit_foo = JumpCursorOnEdit_foo - 1 |
-            \        let b:doopenfold = 2 |
-            \     endif |
-            \     exe JumpCursorOnEdit_foo |
-            \   endif |
-            \ endif
-   " Need to postpone using "zv" until after reading the modelines.
-   autocmd BufWinEnter *
-            \ if exists("b:doopenfold") |
-            \   exe "normal zv" |
-            \   if(b:doopenfold > 1) |
-            \       exe  "+".1 |
-            \   endif |
-            \   unlet b:doopenfold |
-            \ endif
-augroup END
-
