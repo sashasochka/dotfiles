@@ -14,6 +14,7 @@ set-alias nl Enum-Lines
 set-alias subl "C:\Program Files\Sublime Text 3\sublime_text.exe"
 set-alias ssh New-PSSecureRemoteSession
 set-alias sh New-PSRemoteSession
+set-alias cwd Get-Location
 function .. {
 cd ..;
 }
@@ -23,3 +24,4 @@ cd ..\..;
 }
 set-alias edit notepad
 cd $HOME;
+
