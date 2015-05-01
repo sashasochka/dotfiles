@@ -81,8 +81,6 @@ set foldlevel=99
 "Status line gnarliness
 set laststatus=2
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
-"Langmap to ukrainian"
-set langmap=’йцукенгшщзхїфівапролджєячсмитьбю'ЙЦУКЕHГШЩЗХЇФІВАПРОЛДЖЄЯЧСМИТЬБЮ;`qwertyuiop[]asdfghjkl\\;'zxcvbnm\\,.~QWERTYUIOP{}ASDFGHJKL:\\"ZXCVBNM<>
 
 " set shell=/bin/bash
 " set shellcmdflag=--login
