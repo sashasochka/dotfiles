@@ -33,11 +33,6 @@ set backspace=indent,eol,start
 
 " set nowrite backup
 
-" Enable project-specific settings (put configuration file '.vimrc' in a
-" toplevel project directory
-set exrc
-set secure
-
 " Highlight right column
 highlight ColorColumn ctermbg=darkgray
 set colorcolumn=120
