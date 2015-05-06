@@ -46,11 +46,14 @@ function Enum-Lines($filename) {
 set-alias nl Enum-Lines
 set-alias subl "C:\Program Files\Sublime Text 3\sublime_text.exe"
 set-alias grep select-string
-set-alias ssh New-PSSecureRemoteSession
-set-alias sh New-PSRemoteSession
+set-alias wssh New-PSSecureRemoteSession
+set-alias wsh New-PSRemoteSession
+set-alias projects gotoprojects
 set-alias profile gotoprofile
 set-alias downloads gotodownloads
 set-alias cwd Get-Location
+set-alias edit vim
+set-alias env "Get-ChildItem Env:"
 function .. {
 cd ..;
 }
