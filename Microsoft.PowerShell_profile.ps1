@@ -55,12 +55,11 @@ set-alias cwd Get-Location
 set-alias edit vim
 set-alias env "Get-ChildItem Env:"
 function .. {
-cd ..;
+    cd ..;
 }
 
 function ... {
-cd ..\..;
+    cd ..\..;
 }
-set-alias edit notepad
 cd $HOME;
 
