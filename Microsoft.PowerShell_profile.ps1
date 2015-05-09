@@ -56,12 +56,11 @@ set-alias edit vim
 set-alias env "Get-ChildItem Env:"
 set-alias conemu "C:\Program Files\ConEmu\ConEmu64.exe"
 function .. {
-  cd ..;
+    cd ..;
 }
 
 function ... {
-  cd ..\..;
+    cd ..\..;
 }
-set-alias edit notepad
 cd $HOME;
 
