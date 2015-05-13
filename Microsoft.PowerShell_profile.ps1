@@ -1,3 +1,6 @@
+chcp 1251
+$OutputEncoding = [Console]::OutputEncoding
+
 function ff ([string] $glob) { get-childitem -recurse -include $glob }
 
 function osr { shutdown -r -t 5 }
@@ -32,7 +35,7 @@ function gotoprofile{set-location C:\Users\Oleksandr\Documents\WindowsPowerShell
 function gotodownloads{set-location C:\Users\Oleksandr\Downloads}
 
 function Enum-Lines($filename) {
-   $content = gc $filename
+   $content = cat $filename -encoding utf8
 
    $total_lines = 0
    $content | %{++$total_lines}
@@ -62,5 +65,6 @@ function .. {
 function ... {
     cd ..\..;
 }
+
 cd $HOME;
 
