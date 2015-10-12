@@ -4,12 +4,21 @@ $OutputEncoding = [Console]::OutputEncoding
 function Prompt 
 {
     $pwd = $(pwd).ToString()
-    $pwd = $pwd.Substring(0,1).ToLower() + $pwd.Substring(2).ToLower()
+    if ($pwd.StartsWith($env:userprofile))
+    {
+        $pwd = $pwd -replace [regex]::escape($env:userprofile), "~"
+    } 
+    else
+    {
+        $pwd = $pwd.Substring(0,1) + $pwd.Substring(2)
+    }
+    $pwd = $pwd.ToLower()
     $pwd = $pwd -replace '\\', '/'
     $date = date -format "HH:mm:ss"
     # Prompt requires to use echo, not write-host therefore this hack
     write-host "[$date] " -foregroundcolor cyan -NoNewLine
-    write-host "$pwd>" -foregroundcolor green -NoNewLine
+    write-host "$pwd" -foregroundcolor magenta -NoNewLine
+    write-host ">" -foregroundcolor green -NoNewLine
     echo " "
 }
 
