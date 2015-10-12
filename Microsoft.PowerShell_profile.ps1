@@ -1,5 +1,17 @@
-chcp 1251
+chcp 1251 | Out-Null
 $OutputEncoding = [Console]::OutputEncoding
+
+function Prompt 
+{
+    $pwd = $(pwd).ToString()
+    $pwd = $pwd.Substring(0,1).ToLower() + $pwd.Substring(2).ToLower()
+    $pwd = $pwd -replace '\\', '/'
+    $date = date -format "HH:mm:ss"
+    # Prompt requires to use echo, not write-host therefore this hack
+    write-host "[$date] " -foregroundcolor cyan -NoNewLine
+    write-host "$pwd>" -foregroundcolor green -NoNewLine
+    echo " "
+}
 
 function ff ([string] $glob) { get-childitem -recurse -include $glob }
 
@@ -14,6 +26,15 @@ function whoami { (get-content env:\userdomain) + "\" + (get-content env:\userna
 function strip-extension ([string] $filename)
 {
     [system.io.path]::getfilenamewithoutextension($filename)
+}
+
+function Directory-Summary($dir=".")
+{
+  get-childitem $dir | 
+    % { $f = $_ ; 
+        get-childitem -r $_.FullName | 
+           measure-object -property length -sum | 
+             select @{Name="Name";Expression={$f}},Sum}
 }
 
 function New-PSSecureRemoteSession
@@ -56,8 +77,14 @@ set-alias profile gotoprofile
 set-alias downloads gotodownloads
 set-alias cwd Get-Location
 set-alias edit vim
-set-alias env "Get-ChildItem Env:"
+set-alias which Get-Command
+set-alias du Directory-Summary
 set-alias conemu "C:\Program Files\ConEmu\ConEmu64.exe"
+
+function env {
+    Get-ChildItem Env:
+}
+
 function .. {
     cd ..;
 }
