@@ -1,6 +1,8 @@
 chcp 1251 | Out-Null
 $OutputEncoding = [Console]::OutputEncoding
 
+$ErrorView = "CategoryView" # previously was "NormalView"
+
 function Prompt 
 {
     $pwd = $(pwd).ToString()
