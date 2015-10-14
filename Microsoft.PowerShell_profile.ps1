@@ -3,6 +3,11 @@ $OutputEncoding = [Console]::OutputEncoding
 
 $ErrorView = "CategoryView" # previously was "NormalView"
 
+function WhereIs
+{
+    cmd /c where $args
+}
+
 function Prompt 
 {
     $pwd = $(pwd).ToString()
