@@ -1,13 +1,6 @@
 " Setup vundle
 set nocompatible
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'vundle'
-Bundle 'clang-complete'
-Bundle 'Cpp11-Syntax-Support'
-Bundle 'vim-coffee-script'
-Bundle 'git@github.com:derekwyatt/vim-scala'
 
 filetype plugin indent on
 syntax enable
